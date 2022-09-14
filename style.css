@@ -1,0 +1,71 @@
+:root {
+  --color-gray: #8c97b7;
+  --color-blue: #1c38f1;
+  --color-green: #1fcdb0;
+  --input-height: 3rem;
+}
+
+#scratchpad {
+  height: 50vh;
+}
+
+#ball {
+  height: 5vmin;
+  width: 5vmin;
+  border-radius: 50%;
+  background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
+}
+
+
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ui-form {
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem #0003;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1rem;
+  grid-template-areas: 'input button';
+
+  --color: var(--color-gray);
+}
+
+.ui-form:focus-within {
+  --color: var(--color-blue);
+}
+
+.ui-input {
+  grid-area: input;
+  padding: 0 1rem;
+  height: var(--input-height);
+  border: 2px solid var(--color);
+  border-radius: 0.25rem;
+  outline: none;
+  transition: inherit;
+}
+
+.ui-button {
+  grid-area: button;
+  border: none;
+  padding: 0 1rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  height: var(--input-height);
+  background-color: var(--color);
+  transition: inherit;
+}
+
+/* TASKS
+  1. Make the color transition smoothly from grey to blue when focused
+  2. Make the form component rise slowly
+  3. Make the form shake if the input is not valid
+*/
